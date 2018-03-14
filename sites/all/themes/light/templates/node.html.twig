@@ -1,0 +1,23 @@
+<article class="article clearfix"{{ attributes }}>
+ {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="submitted">
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}{{ author_name }}  {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+  <div class="article-content"{{ content_attributes }}>
+    {{ content }}
+  </div>
+
+</article>

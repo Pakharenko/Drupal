@@ -1,0 +1,48 @@
+<div class="layout-container clearfix">
+
+  <header class="header clearfix"role="banner">
+    {{ page.header }}
+    <nav class="navigation clearfix">
+  {{ page.primary_menu }}
+  {{ page.secondary_menu }}
+ </nav>
+ <div class="toggle-menu">
+     <span class="toggle-span"></span>
+      <span class="toggle-span"></span>
+       <span class="toggle-span"></span>
+ </div>
+  </header>
+<div class="layout-content clearfix">
+  <div class="breadcrumb">
+   {{ page.breadcrumb }}
+  </div>
+    {{ page.highlighted }}
+     {{ page.help }}
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <section class="main" role="main">
+      {{ page.content }}
+    </section>{# /.layout-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </div>
+</div>{# /.layout-container #}
+<div class="push">
+</div>
+  {% if page.footer %}
+    <footer class="footer clearfix" role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+

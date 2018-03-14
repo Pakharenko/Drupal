@@ -1,0 +1,7 @@
+helloworld:
+  path: 'hello'
+  defaults:
+    _controller: '\Drupal\helloworld\Controller\HelloWorldController::helloWorld'
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'

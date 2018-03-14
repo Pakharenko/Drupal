@@ -1,0 +1,6 @@
+name: Block For Nix
+description: Создание блока
+core: 8.x
+type: module
+dependencies:
+- block
